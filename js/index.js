@@ -109,7 +109,7 @@ function ergebnisSchleife() {
         // text += "<br> <span class='text-danger'>" + name + "</span>! الرقم هو  <span class='text-success'>" + spieler[name]["runden"][i].zahl + "</span>  . و انت أحتجت إلى " + spieler[name]["runden"][i].versuche + " محاولة.";
         text += "الرقم كان  <span class='text-success'>" + spieler[name]["runden"][i].zahl + "</span>  . عدد المحاولات <span class='text-danger'>" + spieler[name]["runden"][i].versuche + "</span> <br>";
     }
-    arrayText.innerHTML = "<br> <hr>" + name + "<br>" + text + "<br>";
+    arrayText.innerHTML = "<hr>" + name + "<br>" + text + "<br>";
 }
 
 function hundert() {
