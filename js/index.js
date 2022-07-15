@@ -18,6 +18,7 @@ function ergebnis() {
         if (x === y) {
             erstelleRunde()
             ergebnisSchleife();
+            document.getElementById("nav").style.display = "none";
             ms.innerHTML = "<div class='fs-4'> <span class=' fs-1 text-success'> مبروك</span> <br> شاطر حزرت الرقم واحتجت <span class='text-danger'>" + versuch + "</span> من المحاولات</div>";
             foto.innerHTML = " <br> <img src='img/gewonnen.png' alt='Girl in a jacket' width='300' height='auto'> ";
 
@@ -29,7 +30,7 @@ function ergebnis() {
             // document.body.style.backgroundImage = "url('img/gewonnen.jpg')";
             // document.body.style.backgroundRepeat = "no-repeat";
         } else if (x < y) {
-            ms.innerHTML = "<div class='fs-4'>الرقم المطلوب <span class='text-info'> أصغر </span>  من رقمك! <br> حاول مرة أخرى. لسا عندك <span class='text-danger'>" + (maxVersuch - versuch) + "</span> محاولات</div>";
+            ms.innerHTML = "<div class='fs-4'>الرقم المطلوب <span class='text-info'> أصغر </span>  من رقمك <br> حاول مرة أخرى. لسا عندك <span class='text-danger'>" + (maxVersuch - versuch) + "</span> محاولات</div>";
             //"Hallo <span class='text-dark'>" + name + "</span> viel Glück"
 
             // "<div class='bg-light'> +
@@ -39,7 +40,7 @@ function ergebnis() {
             //     (maxVersuch - versuch) + " Versuche übrig.";
             pruefeVersuche();
         } else {
-            ms.innerHTML = "<div class='fs-4'>الرقم المطلوب <span class='text-warning'> أكبر </span>  من رقمك! <br> حاول مرة أخرى. لسا عندك <span class='text-danger'>" + (maxVersuch - versuch) + "</span> محاولات</div>";
+            ms.innerHTML = "<div class='fs-4'>الرقم المطلوب <span class='text-warning'> أكبر </span>  من رقمك <br> حاول مرة أخرى. لسا عندك <span class='text-danger'>" + (maxVersuch - versuch) + "</span> محاولات</div>";
 
             // "Die gesuchte Zahl ist größer als dein Wert! Du hast noch " +
             (maxVersuch - versuch) + " Versuche übrig.";
