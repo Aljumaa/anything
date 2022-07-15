@@ -10,12 +10,6 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.center {
-    margin: auto;
-    width: 20%;
-    padding: 10px;
-}
-
 .e {
     display: none;
 }
@@ -58,7 +52,7 @@ body {
 
 footer {
     position: fixed;
-    height: 100px;
+    left: 0;
     bottom: 0;
     width: 100%;
 }
