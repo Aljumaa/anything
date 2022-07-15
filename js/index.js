@@ -12,7 +12,7 @@ function ergebnis() {
     var ms = document.getElementById("ms");
     var foto = document.getElementById("foto");
     if (y === "" || y < 1 || y === "0" || isNaN(y)) {
-        ms.innerHTML = "<span class='col-md-4 text-danger fs-4 mt-4 border border-danger p-3 px-5'>لا تكتب حروف أكتب ارقام فقط لا غير</span>";
+        ms.innerHTML = "<span class='col-md-4 text-danger fs-4 mt-4 border border-danger p-3 px-5'>أكتب ارقام فقط لا غير</span>";
         // alert("Passt nicht");
     } else {
         versuch++;
@@ -105,7 +105,7 @@ function ergebnisSchleife() {
     var text = "";
     for (var i = 0; i < spieler[name].runden.length; i++) {
         // text += "<br> <span class='text-danger'>" + name + "</span>! الرقم هو  <span class='text-success'>" + spieler[name]["runden"][i].zahl + "</span>  . و انت أحتجت إلى " + spieler[name]["runden"][i].versuche + " محاولة.";
-        text += " الرقم هو  <span class='text-success'>" + spieler[name]["runden"][i].zahl + "</span>  . وانت أحتجت إلى <span class='text-danger'>" + spieler[name]["runden"][i].versuche + "</span> من المحاولات <br>";
+        text += "الرقم هو  <span class='text-success'>" + spieler[name]["runden"][i].zahl + "</span>  . وانت أحتجت إلى <span class='text-danger'>" + spieler[name]["runden"][i].versuche + "</span> من المحاولات <br>";
     }
     arrayText.innerHTML = "<hr>" + text + "<br>";
 }
