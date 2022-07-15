@@ -61,11 +61,12 @@ function pruefeVersuche() {
     if (versuch === maxVersuch) {
         erstelleRunde()
         buttonClassA(0);
-        ms.innerHTML = "<div class='fs-2'>يا <span class='text-danger'> خسران </span> <br> ماظل عندك محاولات. الرقم كان <span class='text-success' >" + x + "</span> </div>";
+        ms.innerHTML = "<div class='fs-2'>يا <span class='text-danger'> خسران </span> <br> ماظل عندك محاولات. الرقم هو <span class='text-success' >" + x + "</span> </div>";
         //neuButtonSpeichern();
         neuButton();
         ergebnisSchleife();
         namespieler.innerHTML = "";
+        document.getElementById("nav").style.display = "none";
         // document.body.style.backgroundImage = "url('img/verloren.jpg')";
         foto.innerHTML = " <br> <img src='img/verloren.png' alt='Girl in a jacket' width='200' height='auto'> ";
 
@@ -78,6 +79,7 @@ function neuButton() {
 }
 
 function neuSpiel() {
+    document.getElementById("nav").style.display = "flex";
     document.getElementById("neuspiel").style.display = "none";
     document.getElementById("weiterspielen").style.display = "none";
     document.getElementById("raten").value = "";
@@ -92,6 +94,7 @@ function neuSpiel() {
 }
 
 function weiterSpielen() {
+    document.getElementById("nav").style.display = "flex";
     document.getElementById("neuspiel").style.display = "none";
     document.getElementById("weiterspielen").style.display = "none";
     document.getElementById("raten").value = "";
@@ -105,7 +108,7 @@ function ergebnisSchleife() {
     var text = "";
     for (var i = 0; i < spieler[name].runden.length; i++) {
         // text += "<br> <span class='text-danger'>" + name + "</span>! الرقم هو  <span class='text-success'>" + spieler[name]["runden"][i].zahl + "</span>  . و انت أحتجت إلى " + spieler[name]["runden"][i].versuche + " محاولة.";
-        text += "الرقم هو  <span class='text-success'>" + spieler[name]["runden"][i].zahl + "</span>  . وانت أحتجت إلى <span class='text-danger'>" + spieler[name]["runden"][i].versuche + "</span> من المحاولات <br>";
+        text += "الرقم كان  <span class='text-success'>" + spieler[name]["runden"][i].zahl + "</span>  . وانت أحتجت إلى <span class='text-danger'>" + spieler[name]["runden"][i].versuche + "</span> من المحاولات <br>";
     }
     arrayText.innerHTML = "<hr>" + text + "<br>";
 }
