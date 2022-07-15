@@ -18,7 +18,7 @@ function ergebnis() {
         if (x === y) {
             erstelleRunde()
             ergebnisSchleife();
-            ms.innerHTML = "<div class='fs-4'> <span class=' fs-1 text-success'> مبروك!</span> <br> شاطر حزرت الرقم واحتجت <span class='text-danger'>" + versuch + "</span> من المحاولات</div>";
+            ms.innerHTML = "<div class='fs-4'> <span class=' fs-1 text-success'> مبروك</span> <br> شاطر حزرت الرقم واحتجت <span class='text-danger'>" + versuch + "</span> من المحاولات</div>";
             foto.innerHTML = " <br> <img src='img/gewonnen.png' alt='Girl in a jacket' width='300' height='auto'> ";
 
             // "Richtig! Du hast die richtige Zahl in " + versuch + " Versuchen erraten";
